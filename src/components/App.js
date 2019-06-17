@@ -11,14 +11,14 @@ class App extends React.Component{
     constructor (p){
         super(p);
         this.state = {images:[]};
- 
-    }
+     }
+     
     render = () => {
         return (
             <div className="ui container"  >
                 <SearchBar searchCallBack={this.onSearchSubmit}/>
                 Found {this.state.images.length} images
-                <ImageList/>
+                <ImageList images={this.state.images}/>
             </div>
         );
     };
@@ -27,7 +27,6 @@ class App extends React.Component{
         const response = await unsplash.get('/search/photos',{
                 params: {query: searchTerm}
             });
-
         this.setState({images: response.data.results});
     }
 

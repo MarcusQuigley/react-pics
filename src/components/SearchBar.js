@@ -3,7 +3,7 @@ import React from 'react';
 class SearchBar extends React.Component{
     constructor(props){
         super(props);
-        this.state = {searchWord : ''};
+        this.state = {searchWord : 'wolf'};
     }    
 
     onInputChanged = e => {
@@ -11,6 +11,7 @@ class SearchBar extends React.Component{
     }
 
     onFormSubmit = e =>{
+ 
         e.preventDefault();
 
         this.props.searchCallBack(this.state.searchWord);
