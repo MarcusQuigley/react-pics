@@ -20,3 +20,8 @@ it('has a input control that users can type into',()=>{
     expect(wrapped.find('input').prop('value')).toEqual(text);
 });
 
+it('calls callback when form is submitted',()=>{    
+   // wrapped.find('form').simulate('submit', {});
+});
+
+
